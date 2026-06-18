@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS orders (
   user_id INT NOT NULL,
   order_number VARCHAR(50) UNIQUE NOT NULL,
   total_amount DECIMAL(10, 2) NOT NULL,
-  status ENUM('pending', 'processing', 'completed', 'cancelled') DEFAULT 'pending',
+  status ENUM('pending', 'processing', 'shipped', 'completed', 'cancelled') DEFAULT 'pending',
   delivery_address TEXT NOT NULL,
   notes TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
